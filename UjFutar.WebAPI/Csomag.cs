@@ -1,8 +1,7 @@
-﻿using System;
-using UjFutar.Api.Models;
-using UjFutar.Api.Interface;
-using UjFutar.EsemenyTar.Api;
+﻿using UjFutar.EsemenyTar.Api;
 using UjFutar.Database;
+using UjFutar.Api.Interface;
+using UjFutar.Api.Models;
 
 namespace UjFutar;
 
@@ -21,11 +20,7 @@ public class Csomag : ICsomag
 
     public void SzallitasiAdatokatRogzit(SzallitasiAdatok szallitasiAdatok)
     {
-        using (var dbContext = new UjFutarDBContext())  // Create an instance of your DbContext
-        {
-            dbContext.SzallitasiAdatok.Add(szallitasiAdatok);  // Add the SzallitasiAdatok entity
-            dbContext.SaveChanges();  // Save changes to the database
-        }
+
     }
 
     public CsomagAdatok Adatok()

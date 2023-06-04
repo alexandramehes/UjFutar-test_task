@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace UjFutar.Api.DTO;
+﻿namespace UjFutar.Api.Models;
 
 public class CsomagAdatok
 {

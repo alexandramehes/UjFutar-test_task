@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UjFutar.Api.DTO;
+using UjFutar.Api.Models;
 using UjFutar.Database.Config;
 
 namespace UjFutar.Database
@@ -10,7 +10,8 @@ namespace UjFutar.Database
 
         public UjFutarContext(IConfiguration configuration) => _configuration = configuration;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => 
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
 
         public DbSet<CsomagAdatok> CsomagAdatok { get; set; }
         public DbSet<SzallitasiAdatok> SzallitasiAdatok { get; set; }

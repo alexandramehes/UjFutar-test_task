@@ -1,8 +1,7 @@
-﻿using System;
-using UjFutar.Api.Models;
-using UjFutar.Api.Interface;
-using UjFutar.EsemenyTar.Api;
+﻿using UjFutar.EsemenyTar.Api;
 using UjFutar.Database;
+using UjFutar.Api.Interface;
+using UjFutar.Api.Models;
 
 namespace UjFutar;
 
@@ -13,19 +12,15 @@ namespace UjFutar;
 //esemenytarbol kiolvashatjuk adott csomag osszes esemenyet, adatait - event stream
 // eldonthejuk hogy adott muvelet elvegezheto e MOST a csomagon - pl 
 
-public class Csomag : ICsomag
+public class CsomagRepository : ICsomag
 {
-    public Csomag(IEsemenyTar esemenyTar, string azonosito)
+    public CsomagRepository(IEsemenyTar esemenyTar, string azonosito)
     {
     }
 
     public void SzallitasiAdatokatRogzit(SzallitasiAdatok szallitasiAdatok)
     {
-        using (var dbContext = new UjFutarDBContext())  // Create an instance of your DbContext
-        {
-            dbContext.SzallitasiAdatok.Add(szallitasiAdatok);  // Add the SzallitasiAdatok entity
-            dbContext.SaveChanges();  // Save changes to the database
-        }
+
     }
 
     public CsomagAdatok Adatok()

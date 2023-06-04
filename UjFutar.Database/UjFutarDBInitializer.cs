@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UjFutar.Api.DTO;
+using UjFutar.Api.Models;
 
 namespace UjFutar.Database
 {

@@ -1,4 +1,4 @@
-﻿namespace UjFutar.Api.DTO
+﻿namespace UjFutar.Api.Models
 {
     public class Szemely
     {

@@ -1,4 +1,4 @@
-﻿using UjFutar.Api.DTO;
+﻿using UjFutar.Api.Models;
 
 namespace UjFutar.Api.Interface;
 
@@ -6,7 +6,7 @@ namespace UjFutar.Api.Interface;
 public interface ICsomag
 {
     public CsomagAdatok Adatok();
-    //public void SzallitasiAdatokatRogzit(SzallitasiAdatok szallitasiAdatok);
+    public void SzallitasiAdatokatRogzit(SzallitasiAdatok szallitasiAdatok);
     //public void Felvesz(CsomagAdatok csomagAdatok);
     //public void AtveteliIgenytRogzit(CsomagAdatok csomagAdatok);
     //public void KozpontbaErkezik(CsomagAdatok csomagAdatok);

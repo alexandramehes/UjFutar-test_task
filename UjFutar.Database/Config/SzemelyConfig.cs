@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using UjFutar.Api.DTO;
+using UjFutar.Api.Models;
 
 namespace UjFutar.Database.Config
 {
