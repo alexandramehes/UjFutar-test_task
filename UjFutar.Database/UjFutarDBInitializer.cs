@@ -16,9 +16,9 @@ namespace UjFutar.Database
             builder.Entity<SzallitasiAdatok>().HasData(new SzallitasiAdatok(002, 3, 1));
             builder.Entity<SzallitasiAdatok>().HasData(new SzallitasiAdatok(003, 2, 3));
 
-            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(001, CsomagAdatok.AllapotEnum.Ures, "Teszt utca 1"));
-            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(002, CsomagAdatok.AllapotEnum.Ures, "Teszt utca 2"));
-            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(003, CsomagAdatok.AllapotEnum.Ures, "Teszt utca 3"));
+            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(001, "Teszt utca 1"));
+            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(002, "Teszt utca 2"));
+            builder.Entity<CsomagAdatok>().HasData(new CsomagAdatok(003, "Teszt utca 3"));
         }
     }
 }

@@ -7,18 +7,16 @@
         public string AktualisPozicio { get; private set; }
         public string? JarmuRendszam { get; private set; }
 
-        public CsomagAdatokDTO(int csomagId, AllapotEnum allapot, string aktualisPozicio,
+        public CsomagAdatokDTO(int csomagId, string aktualisPozicio,
             string jarmuRendszam = "")
         {
             CsomagId = csomagId;
-            Allapot = allapot;
             AktualisPozicio = aktualisPozicio;
             JarmuRendszam = jarmuRendszam;
         }
 
         public enum AllapotEnum
         {
-            Ures,
             FelvetelreVar,
             SzallitasAlatt,
             AtvetelreVar,

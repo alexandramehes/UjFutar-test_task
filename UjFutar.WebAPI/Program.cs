@@ -1,6 +1,10 @@
 using FluentAssertions.Common;
 using Microsoft.EntityFrameworkCore;
+using UjFutar;
+using UjFutar.Api.Interface;
 using UjFutar.Database;
+using UjFutar.EsemenyTar.Api;
+using UjFutar.MemoryEsemenyTar;
 using UjFutar.Repository.Interface;
 using UjFutar.Repository.Repository;
 
@@ -18,8 +22,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ISzemelyRepository, SzemelyRepository>();
-builder.Services.AddScoped<ISzallitasiAdatokRepository, SzallitasiAdatokRepository>();
-builder.Services.AddScoped<ICsomagAdatokRepository, CsomagAdatokRepository>();
+builder.Services.AddScoped<ICsomag, CsomagRepository>();
+builder.Services.AddSingleton<IEsemenyTar, MemoryEsemenyTar>();
 
 builder.Services.AddDbContext<UjFutarContext>();
 

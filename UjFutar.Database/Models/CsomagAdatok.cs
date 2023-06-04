@@ -9,13 +9,23 @@ public class CsomagAdatok
 
     public virtual SzallitasiAdatok SzallitasiAdatok { get; private set; }
 
-    public CsomagAdatok(int csomagId, AllapotEnum allapot, string aktualisPozicio,
-        string jarmuRendszam = "")
+    public CsomagAdatok(int csomagId, string aktualisPozicio, string jarmuRendszam = "")
     {
         CsomagId = csomagId;
-        Allapot = allapot;
         AktualisPozicio = aktualisPozicio;
         JarmuRendszam = jarmuRendszam;
+    }
+
+    public void SetAllapot(string allapot)
+    {
+        if (Enum.TryParse<AllapotEnum>(allapot, out var parsedAllapot))
+        {
+            Allapot = parsedAllapot;
+        }
+        else
+        {
+            throw new ArgumentException("Invalid value");
+        }
     }
 
     public enum AllapotEnum
