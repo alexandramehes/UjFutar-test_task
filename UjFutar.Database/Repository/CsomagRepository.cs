@@ -1,5 +1,4 @@
 ﻿using UjFutar.EsemenyTar.Api;
-using UjFutar.Database;
 using UjFutar.Api.Interface;
 using UjFutar.Api.Models;
 
